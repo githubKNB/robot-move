@@ -30,7 +30,7 @@ public class Robot {
 	
 	public void placeRobot(int xPosition, int yPosition, FacingDirection directionFacing){
 		
-		if(xPosition < 0 || yPosition < 0){
+		if(xPosition < 0 || yPosition < 0 || !surfaceDetail.isValidPosition(xPosition, yPosition)){
 			throw new IllegalArgumentException("Invalid postion");
 		}
 		
